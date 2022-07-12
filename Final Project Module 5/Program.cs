@@ -3,8 +3,6 @@
         static void Main() {
             (string name, string lastName, int age, bool havePet, string[] petNames, string[] favColors) = Anketa();
             PrintAnketa(name, lastName, age, havePet, petNames, favColors);
-            
-
         }
 
         static (string name, string lastName, int age, bool havePet, string[] petNames, string[] favColors) Anketa()
@@ -47,12 +45,13 @@
                     Console.WriteLine("You have a beautiful pet called {0}", petNames[0]);
                 else
                 {
-                    Console.Write("You have {0} beautiful pets called: ");
+                    Console.Write("You have {0} beautiful pets called: ", petNames.Length);
                     PrintArray(petNames);
+                    Console.WriteLine();
                 }
+
             Console.Write("Your favourite colos are: ");
             PrintArray(favColors);
-
 
         }
 
